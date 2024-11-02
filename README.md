@@ -32,7 +32,7 @@ The Rubber Ducky Folder contain : <br>
 <br>
 
 > [!IMPORTANT]
-> Ruber Ducky script is'nt encoded in the format used
+> Ruber Ducky script isn't encoded in the format used
 > by the usb key
 
 <h3>Other</h3>
