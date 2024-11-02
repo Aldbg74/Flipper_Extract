@@ -40,12 +40,10 @@ This scrypt will launch a action who take all needed data, and send them to a do
 > [!CAUTION]
 > All testing should be conducted only on systems you own or have explicit permission to use.
 > Extract files shou be conducted in a safe local environement.
-<br>
 
 <h3>Other</h3>
 Nothing to see here. <br>
 Come back later <br>
-<br>
 
 <h2>The Team</h2>
 - Alexis.D <br>
