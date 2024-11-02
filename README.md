@@ -27,13 +27,20 @@ Come back later <br>
 
 <h3>Rubber Ducky</h3>
 The Rubber Ducky Folder contain : <br>
-- The Duck Scrypt used to the target computer <br>
-- Dockerfiles to extract files to a docker container <br>
-<br>
 
+- The Duck Scrypt used to the target computer : <br>
+
+This scrypt will launch a action who take all needed data, and send them to a docker container. <br>
 > [!IMPORTANT]
 > Ruber Ducky script isn't encoded in the format used
 > by the usb key
+
+- Dockerfiles to extract files to a docker container <br>
+
+> [!CAUTION]
+> All testing should be conducted only on systems you own or have explicit permission to use.
+> Extract files shou be coudncted in a safe local environement.
+<br>
 
 <h3>Other</h3>
 Nothing to see here. <br>
