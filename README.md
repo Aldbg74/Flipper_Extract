@@ -1,7 +1,8 @@
 <h1>Flipper_Extract</h1>
 
 This project demonstrates a simulated data exfiltration process using a Flipper Zero and a USB Rubber Ducky in a controlled, ethical hacking environment. The purpose is to showcase how common techniques for data extraction can be implemented and to highlight potential vulnerabilities in systems, encouraging stronger security practices.
-Project Overview
+
+<h2>Project Overview</h2>
 
 In this simulation, the Flipper Zero is used to perform reconnaissance and initiate communication with unsecured networks. It identifies potential access points and assesses network security, which represents the preliminary stage of a data exfiltration scenario.
 
