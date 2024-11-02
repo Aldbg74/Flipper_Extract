@@ -7,7 +7,8 @@ This project demonstrates a simulated data exfiltration process using a Flipper 
 In this simulation, the Flipper Zero is used to perform reconnaissance and initiate communication with unsecured networks. It identifies potential access points and assesses network security, which represents the preliminary stage of a data exfiltration scenario.
 
 Next, the USB Rubber Ducky is utilized to automate the execution of commands on a target device. This step simulates how an attacker could gain access to sensitive data through social engineering or physical access. For demonstration purposes, the USB Rubber Ducky's payload is designed to collect non-sensitive information, showcasing the ease of automation in data gathering.
-Key Components
+
+<h2>Key Components</h2>
 
     Flipper Zero: A multi-tool device used to explore network vulnerabilities and connect to unsecured Wi-Fi networks. 
     This allows the simulation of data reconnaissance and remote communication.
