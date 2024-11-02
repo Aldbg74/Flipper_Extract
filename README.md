@@ -39,7 +39,7 @@ This scrypt will launch a action who take all needed data, and send them to a do
 
 > [!CAUTION]
 > All testing should be conducted only on systems you own or have explicit permission to use.
-> Extract files shou be coudncted in a safe local environement.
+> Extract files shou be conducted in a safe local environement.
 <br>
 
 <h3>Other</h3>
